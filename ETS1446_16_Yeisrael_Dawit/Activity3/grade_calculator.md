@@ -15,16 +15,16 @@ This document provides a problem analysis, pseudocode and flowchart for a progra
 
 ```mermaid
 graph TD
-  start([Start]) --> inputdata[Enter basic salary, worked hours, and bonus rate]
-  inputdata --> checkworkhours{Are worked hours > 40?}
+  start([Start]) --> inputdata[Input: basic salary, worked hours, and bonus rate]
+  inputdata --> checkworkhours{If worked hours > 40}
   checkworkhours -- No --> grosspay[Calculate gross pay: gross pay = bonusRate*/baseSalary + workedHours/]
-  checkworkhours -- Yes --> overtime[Enter overtime bonus rate per hour]
+  checkworkhours -- Yes --> overtime[Read overtime bonus rate per hour]
   overtime --> overtimepay[Calculate overtime pay: overtime pay = overtimeBonusRate*/workedHours - 40/]
   overtimepay --> grosspay
   grosspay --> pensiondeduction[Calculate pension deduction: grossSalary * 7%]
-  pensiondeduction --> taxrate[Enter tax rate]
+  pensiondeduction --> taxrate[/Read tax rate/]
   taxrate --> taxrdeduction[Calculate tax: grossSalary * taxRate]
   taxrdeduction --> netpay[Calculate net pay: grossSalary - pension - tax]
-  netpay --> output[Display gross pay, pension, tax, and net pay]
+  netpay --> output[/Display gross pay, pension, tax, and net pay/]
   output --> End([End])
 
