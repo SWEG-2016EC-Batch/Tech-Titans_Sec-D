@@ -15,7 +15,7 @@ This document provides a problem analysis, pseudocode and flowchart for a progra
 
 ```mermaid
 graph TD
-  start([Start]) --> inputdata[Input: basic salary, worked hours, and bonus rate]
+  start([Start]) --> inputdata[/Input: basic salary, worked hours, and bonus rate/]
   inputdata --> checkworkhours{If worked hours > 40}
   checkworkhours -- No --> grosspay[Calculate gross pay: gross pay = bonusRate*/baseSalary + workedHours/]
   checkworkhours -- Yes --> overtime[Read overtime bonus rate per hour]
