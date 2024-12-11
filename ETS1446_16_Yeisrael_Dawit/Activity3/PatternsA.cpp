@@ -2,171 +2,184 @@
 using namespace std;
 
 int main() {
-    // Part 1: 5x5 grid of numbers
-    for (int i = 1; i <= 5; i++) {
-        for (int j = 1; j <= 5; j++) {
-            cout << j << "\t"; // Using tab for spacing
+    int patternchoice;
+    cout<< "---patterns show---"<< endl;
+    cout << "Menu"<< endl;
+    cout<<"Enter 1 for 5x5 grid of numbers"<< endl;
+    cout<<"Enter 2 for 4x6 grid of alphabets from A to X"<< endl;
+    cout<<"Enter 3 for Left half pyramid of numbers"<< endl;
+    cout<<"Enter 4 for Right half pyramid of numbers"<< endl;
+    cout<<"Enter 5 for Half pyramid of uppercase letters"<< endl;
+    cout<<"Enter 6 for 5x5 grid of lowercase letters a to e"<< endl;
+    cout<<"Enter 7 for Hollow rectangle"<< endl;
+    cout<<"Enter 8 for Inverted half pyramid"<< endl;
+    cout<<"Enter 9 for Hollow Inverted half pyramid"<< endl;
+    cout<<"Enter 10 for Full pyramid"<< endl;
+    cout<<"Enter 11 for Inverted full pyramid"<< endl;
+    cout<<"Enter 12 for Hollow full pyramid"<< endl;
+    cout << "Enter your choice: ";
+    cin>> patternchoice;
+    
+    if (cin.fail()||patternchoice == 0|| patternchoice>12){
+        cout<<"Invalid Input, please insert the correct choice from the menu.";
+    }else{
+        switch (patternchoice){
+        case 1:{
+            cout << "5x5 grid of numbers";
+            for (int i=0; i <= 5; i++){
+                for (int j=1; j<=5; j++){
+                cout << j << " ";
+                }
+                 cout << endl;
+            }
+            break;
         }
-        cout << endl;
+        case 2: {
+            cout << "4x6 grid of alphabets from A to X"<< endl;
+            char alpha = 'A';
+            for (int i=0; i<4; i++){
+                for (int j=0; j<6; j++){
+                    if(alpha<='X'){
+                    cout<< alpha<< " ";
+                    alpha++;
+                    }
+           
+                }
+                cout << endl;
+            }
+            break;
+        }
+        case 3: {
+            cout << "Left half pyramid of numbers"<< endl;
+            for (int i=1; i<=5; i++){
+            for(int j=1; j<=i; j ++){
+            cout <<j<< " ";
+            }
+            cout << endl;
+        }
+        break;
+        }
+        case 4: {
+             cout << "Right half pyramid of numbers"<< endl;
+             for (int i=1; i<=5; i++){
+                 for (int k=5-i; k>0; k--){
+                 cout<< "  ";
+                 }
+                 for(int j=i; j>=1; j --){
+                 cout <<j<< " ";
+                 }
+                 cout << endl;
+            }
+            break;
+        }
+        case 5: {
+             cout <<"Half pyramid of uppercase letters"<< endl;
+             for(int i=0; i<5; i++){
+                for(char alpha= 'A'; alpha <='A' + i; alpha++){
+                cout << alpha<< " ";
+                }
+                cout << endl;
+            }
+            break;
+        }
+        case 6: {
+            cout << "5x5 grid of lowercase letters a to e"<< endl;
+            for (int i = 0; i < 5; i++){
+                for (char alpha= 'a'; alpha <= 'e'; alpha++){
+                cout << alpha<< " ";
+                }
+                cout << endl;
+            }
+            cout << endl;
+            break;
+        }
+        case 7: {
+            cout<< "Hollow rectangle"<< endl;
+            for (int i=0; i< 7; i ++){
+                for(int j=0; j<8; j++){
+                if (i==0||i==6||j==0||j==7){
+                cout << " *";
+                }else {
+                cout << "  ";
+                }
+            }
+             cout<<endl;
+            }
+            break;
+        }
+        case 8: {
+             cout << "Inverted half pyramid"<<endl;
+             for (int i=6; i>=1; i--){
+                 for(int j = 1; j<= i; j++){
+                 cout<< "* ";
+                }
+            cout << endl;
+            }
+            cout << endl;
+            break;
+        }
+        case 9: {
+            cout << "Hollow Inverted half pyramid"<<endl;
+            for (int i = 6; i >= 1; i--) {
+                for (int j = 1; j <= i; j++) {
+           
+                   if (j == 1 || j == i || i == 6) {
+                   cout << "* ";
+                   } else {
+                   cout << "  ";
+                   }
+                }
+                cout << endl;
+            }
+            cout << endl;
+            break;
+        }
+        case 10: {
+            cout <<"Full pyramid"<< endl;
+            for(int i=1; i <=6; i++){
+               for(int j=1; j<=6-i; j++){
+               cout << " ";
+              }for (int k=1; k<=i; k++){
+               cout << "* ";
+              }
+            cout << endl;
+            }
+            break;
+        }
+        case 11: {
+           cout << "Inverted full pyramid"<< endl;
+           for (int i=6; i >=1; i--){
+                 for (int j=0; j<6-i; j++){
+                 cout << " ";
+                }for (int k=1; k <= i; k++){
+                cout << "* ";
+                }
+                cout << endl;
+            }
+            break;
+        }
+        case 12: {
+             cout << "Hollow full pyramid"<< endl;
+             for(int i=1; i <=6; i++){
+                for(int j=1; j<=6-i; j++){
+                cout << " ";
+                }for (int k=1; k<=i; k++){
+                    if(k==1||k==i||i==6){
+                    cout << "* ";
+                    }else{
+                         cout<< "  ";
+                    }
+                }
+                cout << endl;
+            }
+            break;
+        }
+        default:
+        cout<<"Invalid Choice"<< endl;
+        break;
+    }
+
     }
     
-    cout << endl;
-
-    // Part 2: 4x6 grid of alphabets from A to X
-    char ch = 'A'; // Starting character
-    int rows = 4;  // Number of rows
-    int cols = 6;  // Number of columns
-    
-    for (int i = 0; i < rows; i++) {
-        for (int j = 0; j < cols; j++) {
-            if (ch <= 'X') {
-                cout << ch << " ";
-                ch++;
-            }
-        }
-        cout << endl;
-    }
-
-    cout << endl;
-
-    // Part 3: 5x5 grid of uppercase letters A to E
-    for (int i = 0; i < 5; i++) {
-        for (char ch = 'A'; ch <= 'E'; ch++) {
-            cout << ch << "\t"; // Using tab for spacing
-        }
-        cout << endl;
-    }
-
-    cout << endl;
-
-    // Part 4: Half pyramid of numbers
-    int n = 6; // Pyramid height
-    for (int i = 1; i <= n; i++) {
-        for (int j = 1; j <= i; j++) {
-            cout << j << " ";
-        }
-        cout << endl;
-    }
-
-    cout << endl;
-
-    // Part 5: Half pyramid of uppercase letters
-    for (int i = 0; i < n; i++) {
-        for (char ch = 'A'; ch <= 'A' + i; ch++) {
-            cout << ch << " ";
-        }
-        cout << endl;
-    }
-
-    cout << endl;
-
-    // Part 6: 5x5 grid of lowercase letters a to e
-    for (int i = 0; i < 5; i++) {
-        for (char ch = 'a'; ch <= 'e'; ch++) {
-            cout << ch << "\t"; // Using tab for spacing
-        }
-        cout << endl;
-    }
-
-    cout << endl;
-
-    // Part 7: Hollow rectangle
-    rows = 7;
-    cols = 8;
-
-    for (int i = 1; i <= rows; i++) {
-        for (int j = 1; j <= cols; j++) {
-            // Print star at borders (first and last row, first and last column)
-            if (i == 1 || i == rows || j == 1 || j == cols) {
-                cout << "*";
-            } else {
-                cout << " ";
-            }
-        }
-        cout << endl;
-    }
-
-    cout << endl;
-
-    // Part 8: Full pyramid with height 6
-    n = 6; // Pyramid height
-    for (int i = 1; i <= n; i++) {
-        // Print leading spaces
-        for (int j = i; j < n; j++) {
-            cout << " ";
-        }
-        // Print stars
-        for (int k = 1; k <= (2 * i - 1); k++) {
-            cout << "*";
-        }
-        // Move to the next line
-        cout << endl;
-    }
-
-    cout << endl;
-
-    // Part 9: Hollow full pyramid with height 6
-    n = 6; // Pyramid height
-    for (int i = 1; i <= n; i++) {
-        // Print leading spaces
-        for (int j = i; j < n; j++) {
-            cout << " ";
-        }
-        // Print stars and spaces for hollow effect
-        for (int k = 1; k <= (2 * i - 1); k++) {
-            if (k == 1 || k == (2 * i - 1) || i == n) {
-                cout << "*";
-            } else {
-                cout << " ";
-            }
-        }
-        // Move to the next line
-        cout << endl;
-    }
-
-    cout << endl;
-
-    // Part 10: Inverted full pyramid with height 6
-    n = 6; // Pyramid height
-    for (int i = n; i >= 1; i--) {
-        // Print leading spaces
-        for (int j = n; j > i; j--) {
-            cout << " ";
-        }
-        // Print stars
-        for (int k = 1; k <= (2 * i - 1); k++) {
-            cout << "*";
-        }
-        // Move to the next line
-        cout << endl;
-    }
-
-    cout << endl;
-
-    // Part 11: Inverted half pyramid with height 6
-    n = 6; // Pyramid height
-    for (int i = n; i >= 1; i--) {
-        for (int j = 1; j <= i; j++) {
-            cout << "*";
-        }
-        cout << endl;
-    }
-
-    cout << endl;
-
-    // Part 12: Inverted hollow half pyramid with height 6
-    n = 6; // Pyramid height
-    for (int i = n; i >= 1; i--) {
-        for (int j = 1; j <= i; j++) {
-            // Print stars at the borders or for the last row
-            if (j == 1 || j == i || i == n) {
-                cout << "*";
-            } else {
-                cout << " ";
-            }
-        }
-        cout << endl;
-    }
-
     return 0;
 }

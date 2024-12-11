@@ -2,175 +2,187 @@
 using namespace std;
 
 int main() {
-    int rows, cols;
-
-    // Part 1: Grid of numbers
-    cout << "Enter the number of rows and columns for the number grid: ";
-    cin >> rows >> cols;
-    for (int i = 1; i <= rows; i++) {
-        for (int j = 1; j <= cols; j++) {
-            cout << j << "\t"; // Using tab for spacing
-        }
-        cout << endl;
-    }
+    int patternchoice;
+    int row;
+    int column;
+    cout << "---patterns show---" << endl;
     
-    cout << endl;
-
-    // Part 2: Grid of alphabets
-    char ch = 'A'; // Starting character
-    cout << "Enter the number of rows and columns for the alphabet grid: ";
-    cin >> rows >> cols;
-    for (int i = 0; i < rows; i++) {
-        for (int j = 0; j < cols; j++) {
-            if (ch <= 'X') {
-                cout << ch << " ";
-                ch++;
+    cout << "Menu"<< endl;
+    cout << "Enter 1 for grid of numbers" << endl;
+    cout << "Enter 2 for grid of alphabets from A to X" << endl;
+    cout << "Enter 3 for Left half pyramid of numbers" << endl;
+    cout << "Enter 4 for Right half pyramid of numbers" << endl;
+    cout << "Enter 5 for Half pyramid of uppercase letters" << endl;
+    cout << "Enter 6 for grid of lowercase letters a to e" << endl;
+    cout << "Enter 7 for Hollow rectangle" << endl;
+    cout << "Enter 8 for Inverted half pyramid" << endl;
+    cout << "Enter 9 for Hollow Inverted half pyramid" << endl;
+    cout << "Enter 10 for Full pyramid" << endl;
+    cout << "Enter 11 for Inverted full pyramid" << endl;
+    cout << "Enter 12 for Hollow full pyramid" << endl;
+    cout << "Choice: ";
+    cin >> patternchoice;
+    if (cin.fail()||patternchoice==0||patternchoice>12){
+        cout <<"Invalid Inpute, Please enter the correct choice from the menu"<< endl;
+    }else{
+        cout << "Enter number of columns: ";
+        cin >> column;
+        cout << "Enter number of rows: ";
+        cin >> row;
+        switch (patternchoice) {
+        case 1: {
+            cout << "Grid of numbers" << endl;
+            for (int i = 0; i < row; i++) {
+                for (int j = 1; j <= column; j++) {
+                    cout << j << " ";
+                }
+                cout << endl;
             }
+            break;
         }
-        cout << endl;
-    }
-
-    cout << endl;
-
-    // Part 3: Grid of uppercase letters
-    cout << "Enter the number of rows and columns for the uppercase letter grid: ";
-    cin >> rows >> cols;
-    for (int i = 0; i < rows; i++) {
-        for (char ch = 'A'; ch < 'A' + cols; ch++) {
-            cout << ch << "\t"; // Using tab for spacing
-        }
-        cout << endl;
-    }
-
-    cout << endl;
-
-    // Part 4: Half pyramid of numbers
-    int n;
-    cout << "Enter the height of the half pyramid of numbers: ";
-    cin >> n;
-    for (int i = 1; i <= n; i++) {
-        for (int j = 1; j <= i; j++) {
-            cout << j << " ";
-        }
-        cout << endl;
-    }
-
-    cout << endl;
-
-    // Part 5: Half pyramid of uppercase letters
-    cout << "Enter the height of the half pyramid of uppercase letters: ";
-    cin >> n;
-    for (int i = 0; i < n; i++) {
-        for (char ch = 'A'; ch <= 'A' + i; ch++) {
-            cout << ch << " ";
-        }
-        cout << endl;
-    }
-
-    cout << endl;
-
-    // Part 6: Grid of lowercase letters
-    cout << "Enter the number of rows and columns for the lowercase letter grid: ";
-    cin >> rows >> cols;
-    for (int i = 0; i < rows; i++) {
-        for (char ch = 'a'; ch < 'a' + cols; ch++) {
-            cout << ch << "\t"; // Using tab for spacing
-        }
-        cout << endl;
-    }
-
-    cout << endl;
-
-    // Part 7: Hollow rectangle
-    cout << "Enter the number of rows and columns for the hollow rectangle: ";
-    cin >> rows >> cols;
-    for (int i = 1; i <= rows; i++) {
-        for (int j = 1; j <= cols; j++) {
-            if (i == 1 || i == rows || j == 1 || j == cols) {
-                cout << "*";
-            } else {
-                cout << " ";
+        case 2: {
+            cout << "Grid of alphabets from A to X" << endl;
+            char alpha = 'A';
+            for (int i = 0; i < row; i++) {
+                for (int j = 0; j < column; j++) {
+                    if (alpha <= 'X') {
+                        cout << alpha << " ";
+                        alpha++;
+                    }
+                }
+                cout << endl;
             }
+            break;
         }
-        cout << endl;
-    }
-
-    cout << endl;
-
-    // Part 8: Full pyramid
-    cout << "Enter the height of the full pyramid: ";
-    cin >> n;
-    for (int i = 1; i <= n; i++) {
-        for (int j = i; j < n; j++) {
-            cout << " ";
-        }
-        for (int k = 1; k <= (2 * i - 1); k++) {
-            cout << "*";
-        }
-        cout << endl;
-    }
-
-    cout << endl;
-
-    // Part 9: Hollow full pyramid
-    cout << "Enter the height of the hollow full pyramid: ";
-    cin >> n;
-    for (int i = 1; i <= n; i++) {
-        for (int j = i; j < n; j++) {
-            cout << " ";
-        }
-        for (int k = 1; k <= (2 * i - 1); k++) {
-            if (k == 1 || k == (2 * i - 1) || i == n) {
-                cout << "*";
-            } else {
-                cout << " ";
+        case 3: {
+            cout << "Left half pyramid of numbers" << endl;
+            for (int i = 1; i <= row; i++) {
+                for (int j = 1; j <= i && j <= column; j++) {
+                    cout << j << " ";
+                }
+                cout << endl;
             }
+            break;
         }
-        cout << endl;
-    }
-
-    cout << endl;
-
-    // Part 10: Inverted full pyramid
-    cout << "Enter the height of the inverted full pyramid: ";
-    cin >> n;
-    for (int i = n; i >= 1; i--) {
-        for (int j = n; j > i; j--) {
-            cout << " ";
-        }
-        for (int k = 1; k <= (2 * i - 1); k++) {
-            cout << "*";
-        }
-        cout << endl;
-    }
-
-    cout << endl;
-
-    // Part 11: Inverted half pyramid
-    cout << "Enter the height of the inverted half pyramid: ";
-    cin >> n;
-    for (int i = n; i >= 1; i--) {
-        for (int j = 1; j <= i; j++) {
-            cout << "*";
-        }
-        cout << endl;
-    }
-
-    cout << endl;
-
-    // Part 12: Inverted hollow half pyramid
-    cout << "Enter the height of the inverted hollow half pyramid: ";
-    cin >> n;
-    for (int i = n; i >= 1; i--) {
-        for (int j = 1; j <= i; j++) {
-            if (j == 1 || j == i || i == n) {
-                cout << "*";
-            } else {
-                cout << " ";
+        case 4: {
+            cout << "Right half pyramid of numbers" << endl;
+            for (int i = 1; i <= row; i++) {
+                for (int k = column - i; k > 0; k--) {
+                    cout << "  ";
+                }
+                for (int j = 1; j <= i; j++) {
+                    cout << j << " ";
+                }
+                cout << endl;
             }
+            break;
         }
-        cout << endl;
+        case 5: {
+            cout << "Half pyramid of uppercase letters" << endl;
+            for (int i = 0; i < row && i < column; i++) {
+                for (char alpha = 'A'; alpha <= 'A' + i && alpha <= 'A' + column - 1; alpha++) {
+                    cout << alpha << " ";
+                }
+                cout << endl;
+            }
+            break;
+        }
+        case 6: {
+            cout << "Grid of lowercase letters a to e" << endl;
+            for (int i = 0; i < row; i++) {
+                for (char alpha = 'a'; alpha < 'a' + column; alpha++) {
+                    cout << alpha << " ";
+                }
+                cout << endl;
+            }
+            break;
+        }
+        case 7: {
+            cout << "Hollow rectangle" << endl;
+            for (int i = 0; i < row; i++) {
+                for (int j = 0; j < column; j++) {
+                    if (i == 0 || i == row - 1 || j == 0 || j == column - 1) {
+                        cout << "* ";
+                    } else {
+                        cout << "  ";
+                    }
+                }
+                cout << endl;
+            }
+            break;
+        }
+        case 8: {
+            cout << "Inverted half pyramid" << endl;
+            for (int i = row; i >= 1; i--) {
+                for (int j = 1; j <= i && j <= column; j++) {
+                    cout << "* ";
+                }
+                cout << endl;
+            }
+            break;
+        }
+        case 9: {
+            cout << "Hollow Inverted half pyramid" << endl;
+            for (int i = row; i >= 1; i--) {
+                for (int j = 1; j <= i && j <= column; j++) {
+                    if (j == 1 || j == i || i == row) {
+                        cout << "* ";
+                    } else {
+                        cout << "  ";
+                    }
+                }
+                cout << endl;
+            }
+            break;
+        }
+        case 10: {
+            cout << "Full pyramid" << endl;
+            for (int i = 1; i <= row; i++) {
+                for (int j = 1; j <= column - i; j++) {
+                    cout << " ";
+                }
+                for (int k = 1; k <= i; k++) {
+                    cout << "* ";
+                }
+                cout << endl;
+            }
+            break;
+        }
+        case 11: {
+            cout << "Inverted full pyramid" << endl;
+            for (int i = row; i >= 1; i--) {
+                for (int j = 0; j < column - i; j++) {
+                    cout << " ";
+                }
+                for (int k = 1; k <= i; k++) {
+                    cout << "* ";
+                }
+                cout << endl;
+            }
+            break;
+        }
+        case 12: {
+            cout << "Hollow full pyramid" << endl;
+            for (int i = 1; i <= row; i++) {
+                for (int j = 1; j <= column - i; j++) {
+                    cout << " ";
+                }
+                for (int k = 1; k <= i; k++) {
+                    if (k == 1 || k == i || i == row) {
+                        cout << "* ";
+                    } else {
+                        cout << "  ";
+                    }
+                }
+                cout << endl;
+            }
+            break;
+        }
+        
     }
 
+    }
+
+    
     return 0;
 }
