@@ -9,8 +9,10 @@ int main() {
 
     cout << "Enter the basic salary: ";
     cin >> basicSalary;
+
     cout << "Enter the number of worked hours: ";
     cin >> workedHours;
+
     cout << "Enter the bonus rate: ";
     cin >> bonusRate;
 
@@ -20,23 +22,20 @@ int main() {
         overtimePay = (workedHours - 40) * overtimeBonusRate;
     }
 
-
     grossPay = basicSalary + (workedHours * bonusRate) + overtimePay;
-
- 
     pension = grossPay * pensionRate;
 
     cout << "Enter the tax rate (as a decimal): ";
     cin >> taxRate;
 
     tax = grossPay * taxRate;
-
     netPay = grossPay - pension - tax;
 
-    cout << "Gross Pay: " << grossPay << endl;
+    cout << "\nGross Pay: " << grossPay << endl;
     cout << "Pension Deduction: " << pension << endl;
     cout << "Tax Deduction: " << tax << endl;
     cout << "Net Pay: " << netPay << endl;
 
     return 0;
 }
+
