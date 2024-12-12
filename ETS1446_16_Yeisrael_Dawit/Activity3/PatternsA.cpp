@@ -2,26 +2,30 @@
 using namespace std;
 
 int main() {
-    int patternchoice;
-    cout<< "---patterns show---"<< endl;
-    cout << "Menu"<< endl;
-    cout<<"Enter 1 for 5x5 grid of numbers"<< endl;
-    cout<<"Enter 2 for 4x6 grid of alphabets from A to X"<< endl;
-    cout<<"Enter 3 for Left half pyramid of numbers"<< endl;
-    cout<<"Enter 4 for Right half pyramid of numbers"<< endl;
-    cout<<"Enter 5 for Half pyramid of uppercase letters"<< endl;
-    cout<<"Enter 6 for 5x5 grid of lowercase letters a to e"<< endl;
-    cout<<"Enter 7 for Hollow rectangle"<< endl;
-    cout<<"Enter 8 for Inverted half pyramid"<< endl;
-    cout<<"Enter 9 for Hollow Inverted half pyramid"<< endl;
-    cout<<"Enter 10 for Full pyramid"<< endl;
-    cout<<"Enter 11 for Inverted full pyramid"<< endl;
-    cout<<"Enter 12 for Hollow full pyramid"<< endl;
+   char Choice;
+   cout<< "     ---patterns show---"<< endl;
+
+    do {
+        int patternchoice;
+    cout << "        ***Menu***"<< endl;
+    cout<<"Enter 1 to see 5x5 grid of numbers"<< endl;
+    cout<<"Enter 2 to see 4x6 grid of alphabets from A to X"<< endl;
+    cout<<"Enter 3 to see Left half pyramid of numbers"<< endl;
+    cout<<"Enter 4 to see Right half pyramid of numbers"<< endl;
+    cout<<"Enter 5 to see Half pyramid of uppercase letters"<< endl;
+    cout<<"Enter 6 to see 5x5 grid of lowercase letters a to e"<< endl;
+    cout<<"Enter 7 to see Hollow rectangle"<< endl;
+    cout<<"Enter 8 to see Inverted half pyramid"<< endl;
+    cout<<"Enter 9 to see Hollow Inverted half pyramid"<< endl;
+    cout<<"Enter 10 to see Full pyramid"<< endl;
+    cout<<"Enter 11 to see Inverted full pyramid"<< endl;
+    cout<<"Enter 12 to see Hollow full pyramid"<< endl;
     cout << "Enter your choice: ";
     cin>> patternchoice;
     
     if (cin.fail()||patternchoice == 0|| patternchoice>12){
-        cout<<"Invalid Input, please insert the correct choice from the menu.";
+        cout<<"Invalid Input, please insert the correct choice from the menu."<< endl;
+       
     }else{
         switch (patternchoice){
         case 1:{
@@ -174,12 +178,13 @@ int main() {
             }
             break;
         }
-        default:
-        cout<<"Invalid Choice"<< endl;
-        break;
+       
     }
-
+    cout << "Do you want to see other patterns?(y/n): ";
+    cin>> Choice;
     }
+    }while(Choice=='y'||Choice=='Y');
     
+    cout << "Thank you for exploring the patterns. Have a great day!";
     return 0;
 }

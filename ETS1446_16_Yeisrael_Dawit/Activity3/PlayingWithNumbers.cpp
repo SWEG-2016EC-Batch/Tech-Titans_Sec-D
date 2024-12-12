@@ -5,32 +5,30 @@ using namespace std;
 int main() {
     int num;
     int choice;
+    char retry;
+    cout << "---Wellcome to Gaming with numbers---" << endl;
     do {
-        cout << "Welcome to Gaming with Numbers" << endl;
-        cout << "Enter an integer: ";
+        cout << "Enter an integer to play with: ";
         cin >> num;
         if (cin.fail()) {
-            cout << "Invalid Input, please enter an integer number" << endl;
-            cin.clear(); // Clear the error flag
-            cin.ignore(numeric_limits<streamsize>::max(), '\n'); // Discard invalid input
+            cout << "Invalid Input, please insert only positive integer number." << endl;
+           
         } else {
-            cout << "Menu:" << endl;
-            cout << "Enter 1 to Print the reverse of the number" << endl;
-            cout << "Enter 2 to Count the number of digits in the number" << endl;
-            cout << "Enter 3 to Find the product of even digits in the number" << endl;
-            cout << "Enter 4 to Print the first and last digit and their sum" << endl;
-            cout << "Enter 5 to Swap the first and last digit of the number" << endl;
-            cout << "Enter 6 to Check if the number is a palindrome" << endl;
-            cout << "Enter 7 to Find the frequency of each digit in the number" << endl;
-            cout << "Enter 8 to Check if the number is a Strong number" << endl;
-            cout << "Enter 9 to Check if the number is a Perfect number" << endl;
+            cout << "       ***Menu***" << endl;
+            cout << "Enter 1 to Print the reverse of the number." << endl;
+            cout << "Enter 2 to Count the number of digits in the number." << endl;
+            cout << "Enter 3 to Find the product of even digits in the number." << endl;
+            cout << "Enter 4 to Print the first and last digit and their sum." << endl;
+            cout << "Enter 5 to Swap the first and last digit of the number." << endl;
+            cout << "Enter 6 to Check if the number is a palindrome." << endl;
+            cout << "Enter 7 to Find the frequency of each digit in the number." << endl;
+            cout << "Enter 8 to Check if the number is a Strong number." << endl;
+            cout << "Enter 9 to Check if the number is a Perfect number." << endl;
             cout << "Enter your choice: ";
             cin >> choice;
-
-            if (cin.fail() || choice < 1 || choice > 9) {
-                cout << "Invalid Input, please enter the correct choice from the menu" << endl;
-                cin.clear(); // Clear the error flag
-                cin.ignore(numeric_limits<streamsize>::max(), '\n'); // Discard invalid input
+            if (cin.fail() || choice > 9 || choice < 1) {
+                cout << "Please insert the correct choice number from the menu." << endl;
+               
             } else {
                 switch (choice) {
                     case 1: {
@@ -49,8 +47,8 @@ int main() {
                             count = 1;
                         } else {
                             while (original != 0) {
-                                original /= 10;
-                                count++;
+                                original = original / 10;
+                                count = count + 1;
                             }
                         }
                         cout << "Number of digits in your integer: " << count << endl;
@@ -64,20 +62,20 @@ int main() {
                             if (digit % 2 == 0) {
                                 product *= digit;
                             }
-                            original /= 10;
+                            original = original / 10;
                         }
-                        cout << "The product of all even digits in your integer is: " << product << endl;
+                        cout << "The product of all even numbers in your integer is: " << product << endl;
                         break;
                     }
                     case 4: {
-                        int lastDigit = num % 10;
-                        int firstDigit = num;
-                        while (firstDigit >= 10) {
-                            firstDigit /= 10;
+                        int lastdigit = num % 10;
+                        int firtdigit = num;
+                        while (firtdigit >= 10) {
+                            firtdigit /= 10;
                         }
-                        cout << "First digit of your number: " << firstDigit << endl;
-                        cout << "Last digit of your number: " << lastDigit << endl;
-                        cout << "Sum of the first and last digit: " << firstDigit + lastDigit << endl;
+                        cout << "First digit of your number: " << firtdigit << endl;
+                        cout << "Last digit of your number: " << lastdigit << endl;
+                        cout << "Sum of the last and the first digit: " << firtdigit + lastdigit << endl;
                         break;
                     }
                     case 5: {
@@ -86,18 +84,18 @@ int main() {
                             count = 1;
                         } else {
                             while (original != 0) {
-                                original /= 10;
-                                count++;
+                                original = original / 10;
+                                count = count + 1;
                             }
                         }
-                        int lastDigit = num % 10;
-                        int firstDigit = num;
-                        while (firstDigit >= 10) {
-                            firstDigit /= 10;
+                        int lastdigit = num % 10;
+                        int firtdigit = num;
+                        while (firtdigit >= 10) {
+                            firtdigit /= 10;
                         }
-                        int swapped = lastDigit * pow(10, count - 1) + num % (int) pow(10, count - 1);
-                        swapped -= lastDigit;
-                        swapped += firstDigit;
+                        int swapped = lastdigit * pow(10, count - 1) + num % (int) pow(10, count - 1);
+                        swapped -= lastdigit;
+                        swapped += firtdigit;
                         cout << "Swapped number: " << swapped << endl;
                         break;
                     }
@@ -109,16 +107,16 @@ int main() {
                             original /= 10;
                         }
                         if (num == reverse) {
-                            cout << num << " is a palindrome" << endl;
+                            cout << "Is palindrome" << endl;
                         } else {
-                            cout << num << " is not a palindrome" << endl;
+                            cout << "Is not palindrome" << endl;
                         }
                         break;
                     }
                     case 7: {
                         int original = num;
-                        cout << "Digit  frequency" << endl;
-                        for (int digit = 0; digit <= 9; digit++) {
+                        cout << "Digit      frequency" << endl;
+                        for (int digit = 0; digit <= 10; digit++) {
                             int count = 0;
                             original = num;
                             while (original != 0) {
@@ -128,27 +126,27 @@ int main() {
                                 original /= 10;
                             }
                             if (count > 0) {
-                                cout << "   " << digit << "    " << count << endl;
+                                cout << "  " << digit << "           " << count << endl;
                             }
                         }
                         break;
                     }
                     case 8: {
-                        int sum = 0;
-                        int original = num;
+                        unsigned long long int sum = 0;
+                        unsigned long long int original = num;
                         while (original != 0) {
                             int digit = original % 10;
                             int factorial = 1;
-                            for (int i = 1; i <= digit; i++) {
+                            for (int i = 0; i >= digit; i++) {
                                 factorial *= i;
                             }
                             sum += factorial;
                             original /= 10;
                         }
                         if (sum == num) {
-                            cout << num << " is a Strong number" << endl;
+                            cout << num << "Is strong" << endl;
                         } else {
-                            cout << num << " is not a Strong number" << endl;
+                            cout << num << "Is not strong" << endl;
                         }
                         break;
                     }
@@ -160,23 +158,22 @@ int main() {
                             }
                         }
                         if (sum == num) {
-                            cout << num << " is a Perfect number" << endl;
+                            cout << num << " Is Perfect" << endl;
                         } else {
-                            cout << num << " is not a Perfect number" << endl;
+                            cout << num << " Is Not perfect" << endl;
                         }
                         break;
                     }
-                    default: {
-                        cout << "Invalid Choice" << endl;
-                        break;
-                    }
                 }
+                cout<< "Thank you for playing 'Gaming with Numbers'."<<endl;
+                cout << endl;
+                cout << "Do you want to continue?(y/n): ";
+        cin >> retry;
             }
         }
-
-        cout << "Do you want to try again? (y/n): ";
-        cin >> choice;
-    } while (choice == 'y' || choice == 'Y');
+        
+    } while (retry == 'y' || retry == 'Y');
+    cout<< endl;
 
     return 0;
 }
