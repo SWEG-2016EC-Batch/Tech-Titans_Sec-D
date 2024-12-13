@@ -1,12 +1,12 @@
 # Problem Analysis
--This program calculates a student's total mark based on scores from different assessments (test, quiz, project, assignment, and final exam) and assigns a grade based on the total mark.
+-calculates a student's total mark based on scores from different assessments (test, quiz, project, assignment, and final exam) and assigns a grade based on the total mark.
 
 ### Inputs
-- **Test Score (test)**: Score out of 15%.
-- **Quiz Score (quiz)**: Score out of 5%.
-- **Project Score (project)**: Score out of 20%.
-- **Assignment Score (assignment)**: Score out of 10%.
-- **Final Exam Score (final_exam)**: Score out of 50%.
+- **test**: out of 15%.
+- **quiz**: out of 5%.
+- **project**: out of 20%.
+- **assignment**: out of 10%.
+- **final_exam**: out of 50%.
 
 ### Processing
 - **Total Mark**:
@@ -15,7 +15,7 @@
   Compare `total_mark` against predefined grade ranges.
 
 ### Outputs
-- **Total Mark (total_mark)**: Sum of all input scores.
+- **Total Mark**: Sum of all input scores.
 - **Grade**: Letter grade based on the total mark.
 
 # Pseudocode
