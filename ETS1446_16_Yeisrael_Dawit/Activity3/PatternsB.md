@@ -1,6 +1,7 @@
 ## Pattern Generator
 --- 
 This file provide the pseudocode for the program(updated version of PatternsA file) that allows users to select and display various patterns based on their choice and the number of rows they enter.
+
 ---
 ### Pseudocode
 --- 

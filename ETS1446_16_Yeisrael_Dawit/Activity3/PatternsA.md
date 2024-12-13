@@ -1,6 +1,7 @@
 ## Pattern Generator
 --- 
 This file provide the pseudocodefor a program that allows users to select and display various patterns based on their choice.
+
 --- 
 ### Pseudocode
 --- 

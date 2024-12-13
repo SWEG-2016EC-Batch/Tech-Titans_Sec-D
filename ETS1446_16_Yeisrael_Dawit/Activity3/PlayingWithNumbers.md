@@ -1,6 +1,7 @@
 ## Playing with numbers
 ---
 This file provides the pseudocode for the program of number gaming that allows users to perform various mathematical operations on an input number.
+
 ---
 ### Pseudocode
 --- 
