@@ -1,13 +1,13 @@
 ## Pattern Generator
-This pseudocode outlines a program that allows users to select and display various patterns based on their choice.
+This file provide the pseudocodefor a program that allows users to select and display various patterns based on their choice.
 ### Pseudocode
 
 #### **Start**
-1. **Declare Variables**:
-    - `Choice` (character)
-    - `patternchoice` (integer)
+1. **Declare Variables**: 
+    - `patternchoice` (integer). choice pattern to see.
+    - `Choice` (character). to continue or finish the program.
 
-2. **Print Title**: 
+2. **Print Discreptive Title**: 
     - "---patterns show---"
 
 3. **Loop (Do While Choice is 'y' or 'Y')**:
