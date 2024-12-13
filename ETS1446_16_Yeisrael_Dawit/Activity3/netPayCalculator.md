@@ -1,5 +1,5 @@
 ## Salary Calculator Program
-
+---
 This document provides a problem analysis, pseudocode and flowchart for a program that calculates an employee’s salary, including bonus, gross salary, and net salary.
 
 ---

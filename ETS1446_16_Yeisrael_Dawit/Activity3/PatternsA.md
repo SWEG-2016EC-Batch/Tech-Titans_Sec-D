@@ -1,16 +1,18 @@
 ## Pattern Generator
+--- 
 This file provide the pseudocodefor a program that allows users to select and display various patterns based on their choice.
+--- 
 ### Pseudocode
-
-#### **Start**
-1. **Declare Variables**: 
+--- 
+1. **Start**
+2. **Declare Variables**: 
     - `patternchoice` (integer). choice pattern to see.
     - `Choice` (character). to continue or finish the program.
 
-2. **Print Discreptive Title**: 
+3. **Print Discreptive Title**: 
     - "---patterns show---"
 
-3. **Loop (Do While Choice is 'y' or 'Y')**:
+4. **Loop (Do While Choice is 'y' or 'Y')**:
     - Print Menu:
         - "***Menu***"
         - "Enter 1 to see 5x5 grid of numbers"
@@ -28,12 +30,12 @@ This file provide the pseudocodefor a program that allows users to select and di
     - Prompt User: "Enter your choice: "
     - Read `patternchoice`
 
-4. **Validate Input**:
+5. **Validate Input**:
     - If `patternchoice` is not valid (not in range 1-12):
         - Print "Invalid Input, please insert the correct choice from the menu."
     - Else (if `patternchoice` is valid):
 
-5. **Switch Case on `patternchoice`**:
+6. **Switch Case on `patternchoice`**:
     - **Case 1**: 5x5 grid of numbers
         - Print "5x5 grid of numbers"
         - Loop from 0 to 5 (rows)
@@ -126,17 +128,17 @@ This file provide the pseudocodefor a program that allows users to select and di
                 - Else:
                     - Print space
 
-6. **End Switch**
+7. **End Switch**
 
-7. **Prompt User**: "Do you want to see other patterns?(y/n): "
-8. **Read `Choice`**
+8. **Prompt User**: "Do you want to see other patterns?(y/n): "
+9. **Read `Choice`**
     - If `Choice` is 'y' or 'Y':
         - Go to Step 3 (Menu)
 
-9. **End Loop**
+10. **End Loop**
 
-10. **Print Closing Message**:
+11. **Print Closing Message**:
     - "Thank you for exploring the patterns. Have a great day!"
 
-11. **End**
+12. **End**
 

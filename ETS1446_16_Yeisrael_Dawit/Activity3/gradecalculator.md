@@ -1,9 +1,10 @@
 ## Salary Calculator Program
+---
 This document provides a problem analysis, pseudocode and flowchart for a program that calculates a claculate a student total mark and print the crrosponding grade latter.
 
 ---
 ## Problem Analysis
-
+--- 
 ### Input
 1. **Test score** (out of 15%)
 2. **Quiz score** (out of 5%)
@@ -38,7 +39,7 @@ This document provides a problem analysis, pseudocode and flowchart for a progra
 2. **Grade letter**
 ---
 ### Pseudocode
-
+---
 1. **START**
 2. **Read Input Scores:**
    - DISPLAY "Enter your test result out of 15%:"
@@ -77,6 +78,7 @@ This document provides a problem analysis, pseudocode and flowchart for a progra
 ---
 
 ## Flowchart
+---
 
 ```mermaid
 graph TD
