@@ -1,30 +1,5 @@
 # Fitness Tracking System
-This 
 
-## Problem Analysis
-
-### Inputs:
-1. **Menu Option**: Allows the user to choose between four options:
-   - Joining as an instructor
-   - Joining as a runner
-   - Searching a runner's history
-   - Exiting the program
-2. **Number of Runners**: The instructor will input how many new runners will be added.
-3. **Runner's Information**: Includes the runner's name, unique code, and daily running mileage (7 days).
-4. **Search Criteria**: If the user wants to search for a runner's performance, they will enter the runner's name and code.
-
-### Outputs:
-1. **Run Information**: Prints the weekly mileage of each runner.
-2. **Performance Feedback**: Provides feedback based on the average number of miles run by each runner.
-3. **Runner's History**: Allows the instructor or others to search for a specific runner's daily mileage.
-
-### Operations:
-1. **Menu Options**: The program displays a menu for the user to choose from.
-2. **Runner Addition**: The instructor can add a number of runners, set unique codes for them, and input their daily mileage.
-3. **Performance Tracker**: The program calculates the total and average miles for each runner and provides performance feedback.
-4. **Search Functionality**: A user can search for a specific runner's history by providing their name and unique code.
-5. **Error Handling**: The program includes validation checks for proper input (e.g., for the number of runners and mileage).
----
 ## Algorithm Design
 
 ### Pseudocode:
