@@ -1,4 +1,15 @@
 # Fitness Tracking System
+## Problem Analysis 
+ ### Inputs: 
+    1.Menu Option: Allows the user to choose between four options:  
+        -joining as an instructor  
+        -joining as a runner 
+        -searching a runner's history and  
+        -exiting the program. 
+    2.Number of Runners: The instructor will input how many new runners will be added. 
+    3.Runner's Information: Includes the runner's name, unique code, and daily running mileage (7 days). 
+    4.Search Criteria: If the user wants to search for a runner's performance, they will enter the runner's name and code.
+
 
 ## Algorithm Design
 
