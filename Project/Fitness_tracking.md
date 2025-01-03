@@ -9,6 +9,11 @@
     2.Number of Runners: The instructor will input how many new runners will be added. 
     3.Runner's Information: Includes the runner's name, unique code, and daily running mileage (7 days). 
     4.Search Criteria: If the user wants to search for a runner's performance, they will enter the runner's name and code.
+    
+ ### Outputs
+    1.Run Information: Prints the weekly mileage of each runner.
+    2.Performance Feedback: Provides feedback based on the average number of miles run by each runner.
+    3.Runner's History: Allows the instructor or others to search for a specific runner's daily mileage.
 
 
 ## Algorithm Design
