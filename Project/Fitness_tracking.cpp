@@ -93,7 +93,9 @@ int main() {
                             } else {
                                 isvalid = true;
                                 break;
-                            }
+                           
+                }
+                         
                         }
 
                         if (!isvalid) {
@@ -142,6 +144,48 @@ int main() {
 
                 break;
             }
+                   case 3: {
+                if (numRunners == 0) {
+                    cout << "No runners available to search. Please add runners first." << endl;
+                    break;
+                }
+
+                string inputName, inputCode;
+                cout << "\nEnter the name and code of the runner to view their history:" << endl;
+                cout << "Name: ";
+                getline(cin, inputName);
+
+                cout << "Code: ";
+                getline(cin, inputCode);
+
+                bool found = false;
+                for (i = 0; i < numRunners; i++) {
+                    if (runners[i] == inputName && code[i] == inputCode) {
+                        found = true;
+                        cout << "History of " << runners[i] << " (Code: " << code[i] << "):" << endl;
+                        for (j = 0; j < 7; j++) {
+                            cout << "Day " << j + 1 << ": " << miles[i][j] << " miles" << endl;
+                        }
+                        cout << "Total Miles: " << totalmiles[i] << endl;
+                        cout << "Average Miles: " << averagemiles[i] << endl;
+                        break;
+                    }
+                }
+
+                if (!found) {
+                    cout << "Runner not found. Please check the name and code." << endl;
+                }
+
+                break;
+            }
+
+            case 4:
+                cout << "Exiting the program. Goodbye!" << endl;
+                return 0;
+
+            default:
+                cout << "Invalid choice!" << endl;
+                break;
         }
 
         // Prompt user to continue
