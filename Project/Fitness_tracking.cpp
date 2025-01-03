@@ -55,3 +55,61 @@ int main() {
                         break; 
                     } 
                 }
+                
+                if (!isvalid) {
+                    cout << "You entered wrong values too many times. Try again later!" << endl;
+                    break;
+                }
+
+                for (i = initialNumRunners; i < numRunners; i++) {
+                    cin.ignore(); // Clear the buffer before reading new input
+
+                    cout << "Enter full name of runner " << i + 1 << ": ";
+                    getline(cin, runners[i]);
+
+                    cout << "Set a unique code for " << runners[i] << ": ";
+                    getline(cin, code[i]);
+
+                    cout << "Enter the miles run by " << runners[i] << " for each day of the week (7 days):" << endl;
+                    totalmiles[i] = 0;
+
+                    for (j = 0; j < 7; j++) {
+                        attempt = 5;
+                        isvalid = false;
+
+                        while (attempt > 0) {
+                            cout << "Day " << j + 1 << ": ";
+                            cin >> miles[i][j];
+
+                            if (cin.fail() || miles[i][j] < 0) {
+                                cin.clear();
+                                cin.ignore(1000, '\n');
+
+                                cout << "Invalid input! Please enter a non-negative value." << endl;
+                                cout << "Remaining attempt " << attempt << endl;
+
+                                attempt--;
+                            } else {
+                                isvalid = true;
+                                break;
+                            }
+                        }
+
+                        if (!isvalid) {
+                            cout << "You entered wrong values too many times. Try again later!" << endl;
+                            return -1;
+                        }
+
+                        totalmiles[i] += miles[i][j];
+                    }
+                    averagemiles[i] = totalmiles[i] / 7;
+                }
+
+                cout << left << setw(20) << "Name"
+                     << setw(10) << "Code";
+                for (int i = 0; i < 7; i++) {
+                    cout << right<<setw(9) << "Day " << i + 1;
+                }
+                cout << right << setw(17) << "Total Miles"
+                     << setw(17) << "Average Miles" << endl;
+                cout << string(140, '-') << endl;
