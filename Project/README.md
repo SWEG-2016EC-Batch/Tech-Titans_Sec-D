@@ -57,7 +57,7 @@ This project leverages technology to enhance athletic training by automating run
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 ## Acknowledgements
-
+- We are incredibly grateful for the guidance and support provided by our instructor, **[Chere Lemma](https://github.com/cherelemma)**,       throughout this semester. Your expertise and encouragement have been invaluable in making this project possible. 
 - Special thanks to everyone who contributed to this project.
 - [Contributor's Guide](CONTRIBUTING.md)
 
