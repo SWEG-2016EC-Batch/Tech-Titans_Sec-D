@@ -144,6 +144,83 @@ int main() {
 
                 break;
             }
+         case 2: {
+                if (numRunners >= 15) {
+                    cout << "Runner limit reached. Cannot add more runners." << endl;
+                    break;
+                }
+
+                string runner;
+                string runnerCode;
+                double runnerMiles[7];
+                double runnerTotalMiles = 0;
+                double runnerAverageMiles;
+                int attempt = 5;
+                bool isvalid = false;
+
+                cout << "Enter your full name: ";
+                getline(cin, runner);
+
+                cout << "Set your code: ";
+                getline(cin, runnerCode);
+
+                cout << "Enter the miles you run for each day of the week (7 days):" << endl;
+                for (j = 0; j < 7; j++) {
+                    attempt = 5;
+                    isvalid = false;
+
+                    while (attempt > 0) {
+                        cout << "Day " << j + 1 << ": ";
+                        cin >> runnerMiles[j];
+
+                        if (cin.fail() || runnerMiles[j] < 0) {
+                            cin.clear();
+                            cin.ignore(1000, '\n');
+                            cout << "Invalid input! Please enter a non-negative value." << endl;
+                            cout << "You are left with " << attempt << " chances!" << endl;
+                            attempt--;
+                        } else {
+                            isvalid = true;
+                            break;
+                        }
+                    }
+
+                    if (!isvalid) {
+                        cout << "You entered wrong values too many times. Try again later!" << endl;
+                        return -1;
+                    }
+
+                    runnerTotalMiles += runnerMiles[j];
+                }
+                runnerAverageMiles = runnerTotalMiles / 7;
+
+                runners[numRunners] = runner;
+                code[numRunners] = runnerCode;
+
+                for (j = 0; j < 7; j++) {
+                    miles[numRunners][j] = runnerMiles[j];
+                }
+
+                totalmiles[numRunners] = runnerTotalMiles;
+                averagemiles[numRunners] = runnerAverageMiles;
+                numRunners++;
+
+                cout << "Runner: " << runner << ", Code: " << runnerCode << endl;
+                cout << "Total miles: " << runnerTotalMiles << ", Average miles per day: " << runnerAverageMiles << endl;
+                cout << "\nPerformance feedback for " << runner << ": ";
+
+                    if (runnerAverageMiles >= 10) {
+                        cout << "Excellent! Keep it up!";
+                    } else if (runnerAverageMiles >= 5) {
+                        cout << "Good progress. Aim for 10+ miles!";
+                    } else {
+                        cout << "Needs improvement. Try to be more consistent.";
+                    }
+                    cout << endl;
+
+                break;
+            }
+
                    case 3: {
                 if (numRunners == 0) {
                     cout << "No runners available to search. Please add runners first." << endl;
