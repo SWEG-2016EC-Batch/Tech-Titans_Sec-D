@@ -1,6 +1,6 @@
 # Fitness Tracking System
 ## Problem Analysis 
- ### Inputs: 
+ ### Inputs 
     1.Menu Option: Allows the user to choose between four options:  
         -joining as an instructor  
         -joining as a runner 
@@ -24,7 +24,7 @@
 
 ## Algorithm Design
 
-### Pseudocode:
+### Pseudocode
 
     1. Start program:
       - Display welcome message.
@@ -75,7 +75,8 @@
 
     5. End program:
 ---
-### Flow Chart:
+### Flow Chart
+
 ```mermaid
 flowchart TD 
  
