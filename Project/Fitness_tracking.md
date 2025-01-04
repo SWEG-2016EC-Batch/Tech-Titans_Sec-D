@@ -76,40 +76,7 @@
     5. End program:
 ---
 ### Flow Chart:
-flowchart TD
-    Start(Start Program: Display welcome message)
-    Start --> Declare[Declare Variables: runners, miles, total_miles, average_miles, code, number_of_runners]
-    Declare --> Menu[Display Menu: 
-    1. Join as Instructor
-    2. Join as Runner 
-    3. Search Runner History 
-    4. Exit]
 
-    Menu --> Choice[Take User Input for Choice]
-
-    Choice -->|Choice = 1| Instructor[Join as Instructor]
-    Instructor --> PromptInstructor[Prompt Instructor for number of runners]
-    PromptInstructor --> ForEachRunner[Loop: For each runner, input name, code, and mileage for 7 days]
-    ForEachRunner --> Calculate1[Calculate total and average mileage]
-    Calculate1 --> Summary[Display tabular summary with feedback]
-    Summary --> Menu
-
-    Choice -->|Choice = 2| Runner[Join as Runner]
-    Runner --> PromptRunner[Prompt Runner for name and unique code]
-    PromptRunner --> InputMileage[Input mileage for 7 days]
-    InputMileage --> Calculate2[Calculate total and average mileage]
-    Calculate2 --> Feedback1[Display performance feedback]
-    Feedback1 --> Menu
-
-    Choice -->|Choice = 3| Search[Search Runner History]
-    Search --> PromptSearch[Prompt user for name and unique code]
-    PromptSearch --> SearchRecords[Search records in the system]
-    SearchRecords --> DisplayHistory[Display daily, total, and average mileage]
-    DisplayHistory --> Menu
-
-    Choice -->|Choice = 4| Exit[Exit Program]
-    Exit --> Farewell[Display farewell message]
-    Farewell --> End(End Program)
 
 
 
