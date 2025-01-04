@@ -12,13 +12,13 @@ int main() {
     cout << "daily running mileage and calculate weekly status.\n"; 
     cout << "Let's get started!\n\n"; 
  
-    char cont; 
-    int numRunners = 0; 
-    string runners[15]; // Assuming a maximum of 15 runners 
-    double miles[15][7]; 
-    double totalmiles[15] = {0}; 
-    double averagemiles[15] = {0}; 
-    string code[15]; 
+    char cont; // vairable to control whether the user wants to continue or not 
+    int numRunners = 0; // variable to keep track of number of runners
+    string runners[15]; // Array to store name of each runner. Assuming a maximum of 15 runners 
+    double miles[15][7]; // Array to store miles run by each runner for 7 days
+    double totalmiles[15] = {0}; // Array to calculate total number of miles for each runner
+    double averagemiles[15] = {0}; // Array to calculate average miles for each runner
+    string code[15]; // Array to store the unique code for each runner
     int i, j; // Loop counters
  
     do { 
@@ -35,6 +35,7 @@ int main() {
  
         switch (choice) { 
             case 1: { 
+             // Case for joining as instructor to add runner
                 int attempt = 5; 
                 bool isvalid = false; 
                 int initialNumRunners = numRunners; 
@@ -61,7 +62,7 @@ int main() {
                     cout << "You entered wrong values too many times. Try again later!" << endl;
                     break;
                 }
-
+                // loop to enter runner detail
                 for (i = initialNumRunners; i < numRunners; i++) {
                     cin.ignore(); // Clear the buffer before reading new input
 
@@ -77,7 +78,8 @@ int main() {
                     for (j = 0; j < 7; j++) {
                         attempt = 5;
                         isvalid = false;
-
+                     
+                       // loop for getting valid input 
                         while (attempt > 0) {
                             cout << "Day " << j + 1 << ": ";
                             cin >> miles[i][j];
@@ -145,6 +147,7 @@ int main() {
                 break;
             }
          case 2: {
+           // case for joining as runner
                 if (numRunners >= 15) {
                     cout << "Runner limit reached. Cannot add more runners." << endl;
                     break;
@@ -222,6 +225,7 @@ int main() {
             }
 
                    case 3: {
+                    // Case to search and display runner's history
                 if (numRunners == 0) {
                     cout << "No runners available to search. Please add runners first." << endl;
                     break;
@@ -257,6 +261,7 @@ int main() {
             }
 
             case 4:
+             // Exit case
                 cout << "Exiting the program. Goodbye!" << endl;
                 return 0;
 
