@@ -20,54 +20,54 @@
 
 ### Pseudocode:
 
-1. **Start program**:
-   - Display welcome message.
+    1. Start program:
+      - Display welcome message.
 
-2. **Declare variables**:
-   - `runners`: An array of names for up to 15 runners.
-   - `miles`: A 2D array for storing weekly mileage of runners.
-   - `total_miles`: An array to store the total mileage of each runner.
-   - `average_miles`: An array to store the average mileage of each runner.
-   - `code`: An array to store unique codes for each runner.
-   - `number_of_runners`: A variable initialized to 0 (initial count of runners).
+    2. Declare variables:
+      - runners: An array of names for up to 15 runners.
+      - miles: A 2D array for storing weekly mileage of runners.
+      - total_miles: An array to store the total mileage of each runner.
+      - average_miles: An array to store the average mileage of each runner.
+      - code: An array to store unique codes for each runner.
+      - number of runners: A variable initialized to 0 (initial count of runners).
 
-3. **Do while user wants to continue**:
-   - **Display menu**:
-     - Present the following options:
-       1. Join as Instructor
-       2. Join as Runner
-       3. Search Runner History
-       4. Exit
+    3. Do while user wants to continue:
+      - Display menu:
+        - Present the following options:
+          1. Join as Instructor
+          2. Join as Runner
+          3. Search Runner History
+          4. Exit
 
-   - **Take user input for choice**:
-     - Prompt the user for their choice and validate input.
+      - Take user input for choice:
+      - Prompt the user for their choice and validate input.
 
-4. **Handle user choices**:
-   - **If choice = 1 (Join as Instructor)**:
-     - Prompt the instructor to enter the number of runners.
-     - For each runner, input the following:
-       - Runner's name
-       - Unique identification code
-       - Daily mileage for 7 days
-     - Calculate total and average miles.
-     - Display a tabular summary of all runners, including their total and average mileage.
-     - Provide performance feedback for each runner based on their average daily mileage.
+    4. Handle user choices:
+      - If choice = 1 (Join as Instructor):
+      - Prompt the instructor to enter the number of runners.
+      - For each runner, input the following:
+        - Runner's name
+        - Unique identification code
+        - Daily mileage for 7 days
+      - Calculate total and average miles.
+      - Display a tabular summary of all runners, including their total and average mileage.
+      - Provide performance feedback for each runner based on their average daily mileage.
 
-   - **If choice = 2 (Join as Runner)**:
-     - Prompt the runner to enter their name and unique code.
-     - Input the runner's daily mileage for a week.
-     - Calculate their total and average mileage.
-     - Display performance feedback based on their average daily mileage.
+    - If choice = 2 (Join as Runner):
+      - Prompt the runner to enter their name and unique code.
+      - Input the runner's daily mileage for a week.
+      - Calculate their total and average mileage.
+      - Display performance feedback based on their average daily mileage.
 
-   - **If choice = 3 (Search Runner History)**:
-     - Prompt the user to enter the runner's name and unique code.
-     - Search for the corresponding records in the system.
-     - Display the runner's daily mileage, total mileage, and average mileage.
+    - If choice = 3 (Search Runner History):
+      - Prompt the user to enter the runner's name and unique code.
+      - Search for the corresponding records in the system.
+      - Display the runner's daily mileage, total mileage, and average mileage.
 
-   - **If choice = 4 (Exit)**:
-     - Terminate the program gracefully by displaying a farewell message.
+    - If choice = 4 (Exit):
+      - Terminate the program gracefully by displaying a farewell message.
 
-5. **End program**:
+    5. End program:
 ---
 ### Flow Chart:
 
