@@ -77,38 +77,35 @@
 ---
 ### Flow Chart:
 ```mermaid
-flowchart TD
-    A[Start Program] --> B[Display Welcome Message]
-    B --> C[Declare Variables]
-    C --> D{Do While User Wants to Continue}
-    D --> E[Display Menu]
-    E --> F{Take User Input for Choice}
-    F --> G[Choice 1: Join as Instructor]
-    F --> H[Choice 2: Join as Runner]
-    F --> I[Choice 3: Search Runner History]
-    F --> J[Choice 4: Exit]
-    
-    G --> K[Instructor Inputs Number of Runners]
-    K --> L[For Each Runner, Input Name, Code, and Mileage]
-    L --> M[Calculate Total and Average Miles for Each Runner]
-    M --> N[Display Summary Table with Total and Average Miles]
-    N --> O[Provide Performance Feedback]
-    O --> D
-
-    H --> P[Runner Inputs Name, Code, and Mileage]
-    P --> Q[Calculate Total and Average Miles for Runner]
-    Q --> R[Display Performance Feedback]
-    R --> D
-
-    I --> S[Search Runner by Name and Code]
-    S --> T[Display Runner's History]
-    T --> D
-
-    J --> U[Display Farewell Message]
-    U --> V[End Program]
-
-    D -->|Exit Condition| V
-
+flowchart TD 
+ 
+    A([Start]) --> B[/Display Welcome Message/] 
+    B --> C[/Show Menu with options 
+            1.Join as Instructor 
+            2.Join as Runner 
+            3.Search Runner History 
+            4.Exit the Program 
+            /] 
+    C --> |option 1| D[/Input Runners Info/] 
+    D --> E[Calculate Total and Average Miles] 
+    E --> F[/Display Table with Runners Info/] 
+    F --> G[/Provide Performance Feedback/] 
+    G --> O 
+ 
+    C --> |option 2| H[/Input Your Info/] 
+    H --> I[Calculate Runner's Total and Average Miles] 
+    I --> J[/Display total miles and average miles/] 
+    J --> K[/Display Performance Feedback/] 
+    K --> O 
+ 
+    C --> |option 3| L[/Input Name and Code/] 
+    L --> M[Search for Runner] 
+    M --> N[/Display Runner's History/] 
+    N --> O{Do you want to continue?} 
+    O --> |Yes| C 
+    O --> |No| P 
+     
+    C --> |option 4| P([End])
 
 
 
