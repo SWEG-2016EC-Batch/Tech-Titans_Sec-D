@@ -76,7 +76,7 @@
     5. End program:
 ---
 ### Flow Chart:
-
+![Flowchart](mermaid-diagram-2025-01-04-161102)
 
 
 
