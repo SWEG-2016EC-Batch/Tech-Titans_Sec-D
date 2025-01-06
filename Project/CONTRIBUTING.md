@@ -8,7 +8,26 @@
   - Calculate the total and average miles for each runner.
   - Display the runner details in a tabular format. 
     
-- **[Yeabsira Yohannes_ETS 1574/16](https://github.com/yeabuti17)** - 
+- **[Yeabsira Yohannes_ETS 1574/16](https://github.com/yeabuti17)**
+**Add New Runner and Record Weekly Mileage.**
+  
+1. Input Runner Information:
+The user enters their full name.
+The user sets a unique code for identification.
+2. Record Running Data:
+The runner provides the number of miles they ran for each of the 7 days in a week.
+The program validates the input to ensure non-negative values are entered.
+3. Calculate Weekly Performance:
+It calculates the total miles run by the runner across the week.
+It computes the average miles run per day.
+4. Store Runner Data:
+The program stores the runner's name, code, daily mileage, total miles, and average miles in the respective arrays.
+5. Provide Feedback:
+Based on the runner's average daily mileage, the program provides performance feedback:
+Excellent if the average is 10+ miles/day.
+Good Progress if the average is between 5 and 10 miles/day.
+Needs Improvement if the average is below 5 miles/day.
+
 - **[Yeabsira Taye_ETS 1439/16](https://github.com/Yeab18)** - 
 
 - **[Yeisrael Dawit_ETS 1446/16](https://github.com/Yetdev27)** - **Output data presentation, user interaction flow, and SDLC model development.**
