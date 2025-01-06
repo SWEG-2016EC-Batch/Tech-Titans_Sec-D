@@ -52,11 +52,7 @@ Needs Improvement if the average is below 5 miles/day.
 
     - Tabular Data Presentation: Implemented a clear tabular format for runners' details, including names, codes, daily miles, total miles, 
                                  and average miles, using `setw()` from `<iomanip>` for proper alignment and clarity.
-    - Performance Feedback: Developed a feedback system based on average weekly miles, providing personalized comments like "Excellent" or
-                            "Needs improvement."
-    - User Interaction & Closing Messages: Implemented a prompt for users to decide whether to continue or exit the program. Added closing message.
-    - System SDLC Documentation: [Have a look here](https://docs.google.com/document/d/1MBrmF4kAjAzc5n13oeh3ODVByFOnk8wxdQ1kdBND9E0/edit?usp=sharing). Used the Iterative Software Development model for the purpose of error-catching and future enhancement.
-    - For best project management practices, created the [CONTRIBUTING.md](CONTRIBUTING.md) and [README.md](README.md).
+    - System SDLC Documentation: [Have a look here](https://docs.google.com/document/d/1MBrmF4kAjAzc5n13oeh3ODVByFOnk8wxdQ1kdBND9E0/edit?usp=sharing). Used the Iterative Software Development model for the purpose of error-catching and future enhancement.For best project management practices, created the [CONTRIBUTING.md](CONTRIBUTING.md) and [README.md](README.md).
 --- 
 
 ### "Coming together is a beginning, staying together is progress, and working together is success." – Henry Ford
