@@ -1,14 +1,23 @@
 ## Contributors
 
-- **[Thomas Addisu_ETS 1350/16](https://github.com/janedoe)** -       
-- **[Tinsae Zegeye_ETS 1359/16](https://github.com/TinsaeZegeye)** -
+- **[Thomas Addisu_ETS 1350/16](https://github.com/janedoe)**  \
+**Program Introduction** \
+  -Displays a welcome message and program description. \
+**Variable Declarations** \
+-Defines variables for tracking runners, their miles, total miles, and unique IDs. \
+**Main Menu** \
+Provides 4 options: Instructor login, runner registration, search runner history, and exit. \
+**Instructor Functionality** \
+-Allows the instructor to add runners by entering a valid number (with error handling and retry options). \
+    
+- **[Tinsae Zegeye_ETS 1359/16](https://github.com/TinsaeZegeye)**  \
   **Input validation and runner details entry**
   - Ensures the instructor inputs a valid data for runner details while adding runners. i.e Valid data for runner's daily running practice and allows for multiple attempts.
   - Prompts the instructor to enter full name, unique code and daily running miles for each runner.
   - Calculate the total and average miles for each runner.
   - Display the runner details in a tabular format. 
     
-- **[Yeabsira Yohannes_ETS 1574/16](https://github.com/yeabuti17)**
+- **[Yeabsira Yohannes_ETS 1574/16](https://github.com/yeabuti17)** \
 **Add New Runner and Record Weekly Mileage.**
   
 1. Input Runner Information:
@@ -30,7 +39,8 @@ Needs Improvement if the average is below 5 miles/day.
 
 - **[Yeabsira Taye_ETS 1439/16](https://github.com/Yeab18)** - 
 
-- **[Yeisrael Dawit_ETS 1446/16](https://github.com/Yetdev27)** - **Output data presentation, user interaction flow, and SDLC model development.**
+- **[Yeisrael Dawit_ETS 1446/16](https://github.com/Yetdev27)** \
+  **Output data presentation, user interaction flow, and SDLC model development.**
 
     - Tabular Data Presentation: Implemented a clear tabular format for runners' details, including names, codes, daily miles, total miles, 
                                  and average miles, using `setw()` from `<iomanip>` for proper alignment and clarity.
