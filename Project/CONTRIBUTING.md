@@ -18,10 +18,8 @@
     - Performance Feedback: Developed a feedback system based on average weekly miles, providing personalized comments like "Excellent" or
                             "Needs improvement."
     - User Interaction & Closing Messages: Implemented a prompt for users to decide whether to continue or exit the program. Added closing message.
-    - Comments and Documentation: Added descriptive comments on some code lines to explain functionality.
     - System SDLC Documentation: [Have a look here](https://docs.google.com/document/d/1MBrmF4kAjAzc5n13oeh3ODVByFOnk8wxdQ1kdBND9E0/edit?usp=sharing). Used the Iterative Software Development model for the purpose of error-catching and future enhancement.
-    - Developed the comprehensive [README.md](README.md) file for clear and effective project documentation.
-    - For best project management practices, created the [CONTRIBUTING.md](CONTRIBUTING.md).
+    - For best project management practices, created the [CONTRIBUTING.md](CONTRIBUTING.md) and [README.md](README.md).
 --- 
 
 ### "Coming together is a beginning, staying together is progress, and working together is success." – Henry Ford
