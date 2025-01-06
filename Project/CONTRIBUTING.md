@@ -50,8 +50,7 @@ Needs Improvement if the average is below 5 miles/day.
 - **[Yeisrael Dawit_ETS 1446/16](https://github.com/Yetdev27)** \
   **Output data presentation, user interaction flow, and SDLC model development.**
 
-    - Tabular Data Presentation: Implemented a clear tabular format for runners' details, including names, codes, daily miles, total miles, 
-                                 and average miles, using `setw()` from `<iomanip>` for proper alignment and clarity.
+    - Tabular Data Presentation: Implemented a clear tabular format for runners' details, using `setw()` from `<iomanip>` for proper alignment and clarity.
     - System SDLC Documentation: [Have a look here](https://docs.google.com/document/d/1MBrmF4kAjAzc5n13oeh3ODVByFOnk8wxdQ1kdBND9E0/edit?usp=sharing). Used the Iterative Software Development model for the purpose of error-catching and future enhancement.For best project management practices, created the [CONTRIBUTING.md](CONTRIBUTING.md) and [README.md](README.md).
 --- 
 
